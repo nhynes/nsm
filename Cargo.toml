@@ -1,0 +1,20 @@
+[package]
+name        = "nsm"
+version     = "0.1.0"
+authors     = ["Nick Hynes <nhynes@nhynes.com>"]
+description = "Idiomatic Rust bindings to AWS Nitro Secure Module (NSM)"
+repository  = "https://github.com/nhynes/nsm"
+license     = "MIT"
+edition     = "2018"
+
+[dependencies]
+aws-nitro-enclaves-cose = "0.1"
+nsm-driver  = { git = "https://github.com/aws/aws-nitro-enclaves-nsm-api.git", branch = "main" }
+nsm-io      = { git = "https://github.com/aws/aws-nitro-enclaves-nsm-api.git", branch = "main" }
+openssl     = "0.10"
+rand_core   = "0.6"
+semver      = "0.11"
+serde       = { version = "1.0", features = ["derive"] }
+serde_bytes = "0.11"
+serde_cbor  =" 0.11"
+thiserror   = "1.0"
